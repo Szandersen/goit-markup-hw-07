@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    color: $secondaryColorBlack;
+}
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: auto;
+}
+.section {
+    padding-bottom: 94px;
+}
+.section-heading {
+    font-size: 36px;
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+}
+.list {
+    list-style-type: none;
+}
