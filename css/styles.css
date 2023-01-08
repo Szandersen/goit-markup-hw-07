@@ -155,6 +155,9 @@ body {
 .home-page-main__content {
     text-align: center;
     width: 700px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 .home-page-main__title {
     color: var(--color-white);
@@ -166,7 +169,7 @@ body {
     margin-bottom: 30px;
 }
 /* --------------------------- MAIN CONTENT ---------------------- */
-/* --------------------------- BUTTONS ---------------------- */
+/* --------------------------- MAIN PAGE BUTTON ---------------------- */
 .button {
     background-color: var(--color-blue);
     color: var(--color-white);
@@ -182,43 +185,16 @@ body {
     cursor: pointer;
 }
 .button--main-page {
+    display: flex;
+    position: absolute;
+    padding: 10px 42px;
+    margin-top: 160px;
     width: 200px;
     height: 50px;
 }
 .button--main-page:hover,
 .button--main-page:focus,
-/* --------------------------- BUTTONS ---------------------- */
-/* porftolio */
-.category-selection {
-    color: var(--color-grey);
-    display: flex;
-    justify-content: center;
-    padding-bottom: 50px;
-    gap: 8px;
-}
-.category-select {
-    background-color: var(--button-background);
-    outline: none;
-    border: none;
-    border-radius: 4px;
-    font-family: 'Roboto';
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
-    width: 121px;
-    height: 38px;
-}
-.category-select:hover,
-.category-select:focus {
-    color: var(--color-white);
-    background-color: var(--color-blue);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-        0px 2px 2px rgba(0, 0, 0, 0.12);
-    cursor: pointer;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
+/* --------------------------- MAIN PAGE BUTTON ---------------------- */
 /* -------------------------- BENEFITS --------------------- */
 .benefits {
     padding: 94px 0;
@@ -693,27 +669,59 @@ body {
 }
 /* ---------------- MAIN PAGE MODAL ----------------- */
 /* END OF MAIN PAGE STYLES */
+
 /* ---------------- PORTFOLIO PAGE ----------------- */
-/* portfolio */
-.img-section-list {
+/* ------------------ PORTFOLIO BUTTONS ---------------------- */
+.portfolio__category-button-list {
+    color: var(--color-grey);
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    gap: 8px;
+}
+.portfolio__category-button-list-item {
+    background-color: var(--button-background);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    width: 121px;
+    height: 38px;
+}
+.portfolio__category-button-list-item:hover,
+.portfolio__category-button-list-item:focus {
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* ------------------ PORTFOLIO BUTTONS ---------------------- */
+/* ------------------------ PORTFOLIO GALLERY -------------------------- */
+.gallery__section-list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
-.img-section-list li {
+.gallery__section-list-item {
     background: #ffffff;
 }
 
-.portfolio-img-window {
+.gallery__img-window {
     position: relative;
     overflow: hidden;
 }
-.img-description-window {
+.gallery__img-label {
     border: 1px solid #eeeeee;
     border-top: none;
     padding: 20px 0 20px 24px;
 }
-.portfolio-img-overlay {
+.gallery__img-specification {
     position: absolute;
     inset: 0;
     background-color: var(--color-blue);
@@ -722,7 +730,7 @@ body {
     z-index: -1;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-img-overlay > p {
+.gallery__img-specification > .gallery__img-specification-text {
     font-weight: 400;
     font-size: 18px;
     line-height: 1.55;
@@ -730,39 +738,18 @@ body {
     color: #ffffff;
     padding: 49px 45px 49px 24px;
 }
-.img-item:hover .portfolio-img-overlay {
+.gallery__section-list-item:hover .gallery__img-specification {
     transform: translateY(0%);
     z-index: 1;
 }
-.img-item:hover,
-.img-item:focus {
+.gallery__section-list-item:hover,
+.gallery__section-list-item:focus {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.img-info {
-    padding: 30px 0;
-}
-.img-title-index {
-    color: var(--color-grey);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19px;
-    letter-spacing: 0.03em;
-    margin-bottom: 20px;
-    display: block;
-}
-.img-description-index {
-    color: var(--color-lightgrey);
-    margin-bottom: 16px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.19px;
-    letter-spacing: 0.03em;
-    display: block;
-}
-.img-title-portfolio {
+.gallery__img-title {
     color: var(--color-grey);
     font-weight: 700;
     font-size: 18px;
@@ -770,49 +757,14 @@ body {
     margin-bottom: 4px;
     display: block;
 }
-.img-description-portfolio {
+.gallery__img-description {
     color: var(--color-lightgrey);
     display: block;
     line-height: 1.875;
 }
-/* portfolio */
-/* portfolio */
-.contact-list {
-    list-style: none;
-    display: flex;
-    gap: 50px;
-}
-/* ? */
-.contact-item {
-    color: var(--color-lightgrey);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    font-style: normal;
-}
-.contact-item:hover,
-.contact-item:focus {
-    color: var(--color-blue);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-/* ? */
-/* portfolio */
+/* ------------------------ PORTFOLIO GALLERY -------------------------- */
+/* ------------------------ PORTFOLIO FOOTER -------------------------- */
 .mail-underline {
     text-decoration: underline;
 }
-/* portfolio */
-
-.contact-list-footer {
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
-}
-
-.contact-item-address {
-    color: var(--color-white);
-    text-decoration: none;
-    font-size: 14px;
-    line-height: 1.71;
-}
+/* ------------------------ PORTFOLIO FOOTER -------------------------- */
