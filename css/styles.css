@@ -192,8 +192,6 @@ body {
     width: 200px;
     height: 50px;
 }
-.button--main-page:hover,
-.button--main-page:focus,
 /* --------------------------- MAIN PAGE BUTTON ---------------------- */
 /* -------------------------- BENEFITS --------------------- */
 .benefits {
@@ -764,7 +762,7 @@ body {
 }
 /* ------------------------ PORTFOLIO GALLERY -------------------------- */
 /* ------------------------ PORTFOLIO FOOTER -------------------------- */
-.mail-underline {
+.footer__mail-underline {
     text-decoration: underline;
 }
 /* ------------------------ PORTFOLIO FOOTER -------------------------- */
