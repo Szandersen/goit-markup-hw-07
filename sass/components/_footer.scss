@@ -25,18 +25,18 @@
         line-height: 1.71;
         font-style: normal;
     }
-    &__contact-list-address:hover,
-    &__contact-list-address:focus {
-        color: $color-blue;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    &__contact-list-item:hover,
-    &__contact-list-item:focus {
-        color: $color-blue;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
+    // &__contact-list-address:hover,
+    // &__contact-list-address:focus {
+    //     color: $color-blue;
+    //     transition-duration: 250ms;
+    //     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    // }
+    // &__contact-list-item:hover,
+    // &__contact-list-item:focus {
+    //     color: $color-blue;
+    //     transition-duration: 250ms;
+    //     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    // }
     &__social {
         margin-left: 70px;
     }
